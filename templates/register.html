@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block title %}register{% endblock %}
+
+{% block head %}
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/register.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+     <!-- 登录 -->
+    <div class="container__form container--signin">
+      <!-- <form > -->
+          <table action="#" class="form" id="form2"  border="0"  >
+              <tr class="trform" >
+                  <td  colspan="2" class="title1"  > </td>
+              </tr>
+              <tr class="trform" >
+                  <td class="xinxi1" >账号：</td>
+                  <td><input type="text" placeholder="账号" class="input" /></td>
+              </tr>
+              <tr class="trform" >
+                  <td class="xinxi1">密码：</td>
+                      <td>
+                          <form><input type="password"  placeholder="请输入密码" autocomplete="off" class="input" /></form></td>
+              </tr>
+            <tr class="trform" >
+              <td colspan="2" >
+                  <input type="checkbox" checked="checked" class="controlheight1" > <label class="beizhu" >我自愿遵守国家法律法规与网页相关规则</label>
+              </td>
+            </tr>
+            <tr class="trform" >
+              <td colspan="2" class="zhucejian">
+                  <a href="#" class="link" style="color: rgb(29, 29, 230);">忘记密码?</a>
+              </td>
+            </tr>
+             <tr class="trform" >
+               <td colspan="2" >
+                  <button class="btn">登录</button>
+              </td>
+              </tr>
+          </table>
+        <!-- </form> -->
+    </div>
+
+    <!-- 注册 -->
+
+  <div class="container__form container--signup">
+  <form method="POST">
+    <table class="form" id="form1" align="center"  border="0"  >
+        <tr >
+          <td  colspan="2" class="title2" > </td>
+            </td>
+        </tr>
+        <tr>
+            <td class="td1">创建用户名：</td>
+            <td class="td2">
+                <input type ="text"  placeholder="用户名" class="input" name="username"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td1">设置密码：</td>
+
+            <td class="td2">
+                <form>
+                <input type="password"  placeholder="请输入密码" autocomplete="off" class="input" name="password"/>
+                </form>
+            </td>
+
+        </tr>
+
+
+    <tr>
+      <td class="td1">邮箱：</td>
+      <td class="td2">
+        <input type="email" placeholder="邮箱" class="input" id="exampleputEmail" name="email">
+      </td>
+    </tr>
+    <tr>
+      <td class="td1">邮箱验证码：</td>
+      <td class="td2">
+        <input type="text" placeholder="验证码" class="input" name="captcha">
+          <div class="input-group-append">
+            <button id="captcha-btn" class="btn_btn-outline-secondary" >发送验证码</button>
+          </div>
+      </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="td3">
+            <input type="submit" class="btn" value="注册"/>
+        </td>
+    </tr>
+    </table>
+      </form>
+    </div>
+
+    <!-- Overlay -->
+    <div class="container__overlay">
+      <div class="overlay">
+        <div class="overlay__panel overlay--left">
+          <button class="btn" id="signIn">登录</button>
+        </div>
+        <div class="overlay__panel overlay--right">
+          <button class="btn" id="signUp">注册</button>
+        </div>
+      </div>
+    </div>
+    <div style="height:4000px">
+    </div>
+    <script type="text/javascript" src="../static/js/denglu.js"></script>
+{% endblock %}
